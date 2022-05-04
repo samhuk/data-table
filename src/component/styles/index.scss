@@ -1,8 +1,17 @@
-// This is the entrypoint scss file for styling the component.
+@import '~@samhuk/table/src/component/styles/index.scss';
+@import '~@samhuk/paginator/src/component/styles/index.scss';
 
-.com-my-component {
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  background-color: #eee;
-  padding: 5px;
+.com-data-table {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+
+  .com-table__rows-wrapper {
+    min-height: 200px;
+  }
+
+  .com-paginator {
+    margin-top: 20px;
+  }
 }

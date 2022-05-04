@@ -2,7 +2,7 @@ import React from 'react'
 import { Routes, Route } from 'react-router-dom'
 import Home from './home'
 import Showcase from './showcase'
-import MyComponent from './showcase/myComponent'
+import DataTable from './showcase/myComponent'
 
 export const render = () => (
   <div className="body-wrapper">
@@ -10,7 +10,7 @@ export const render = () => (
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/showcase" element={<Showcase />}>
-          <Route path="my-component" element={<MyComponent />} />
+          <Route path="data-table" element={<DataTable />} />
         </Route>
       </Routes>
     </div>

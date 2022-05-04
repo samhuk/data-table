@@ -1,16 +1,17 @@
 import React from 'react'
-import { createMyComponent } from '../../../../component'
-import { MyComponentOptions, MyComponent } from '../../../../component/types'
+import { createDataTable } from '../../../../component'
+import { DataTableOptions, DataTable } from '../../../../component/types'
 import Com from './base'
 
 /**
- * Thin wrapper around the MyComponent component
+ * Thin wrapper around the DataTable component
  */
-export const render = (props: { options: MyComponentOptions, setComponent?: (component: MyComponent) => void }) => (
+export const render = (props: { options: DataTableOptions, setComponent?: (component: DataTable) => void }) => (
   <Com
     componentOptions={props.options}
-    createComponent={createMyComponent}
+    createComponent={createDataTable}
     setComponent={props.setComponent}
+    containerElementFullSize
     name="component"
   />
 )
