@@ -39,7 +39,7 @@ const dataTable = createDataTable({
         fieldName: 'field1'
       },
       field2: {
-        fieldName: 'field1'
+        fieldName: 'field2'
       }
     }
   },
