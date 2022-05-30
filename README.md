@@ -6,7 +6,7 @@ A vanilla JS data table UI component. This shows a list of data as rows and colu
 
 ## Usage
 
-`npm i @samhuk/select`
+`npm i @samhuk/data-table`
 
 ```typescript
 import { createDataTable } from '@samhuk/data-table'
