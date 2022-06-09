@@ -30,6 +30,7 @@ export type DataTableOptions = {
 
 export type DataTable = {
   rendered: Rendered
+  setPage: (page: number) => void
 }
 
 export type DataTableColumnPreferences = {

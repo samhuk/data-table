@@ -1,6 +1,6 @@
 {
   "name": "@samhuk/data-table",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A vanilla JS data table UI component",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -11,7 +11,7 @@
   ],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "clean": "rimraf ./build && rimraf ./buildScripts/build",
+    "clean": "rimraf ./build && rimraf ./buildScripts/build && rimraf ./dist",
     "build-build": "npm run clean && tsc -p ./buildScripts/tsconfig.json",
     "build-dev": "npm run build-build && env-cmd -e dev node ./buildScripts/build/build.js",
     "build-prod": "npm run build-build && env-cmd -e prod node ./buildScripts/build/build.js",

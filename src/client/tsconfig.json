@@ -2,12 +2,11 @@
   "$schema": "http://json.schemastore.org/tsconfig",
   "extends": "../../tsconfig.json",
   "include": [
-    "./"
+    "./**/*"
   ],
   "compilerOptions": {
-    "target": "es2017",
-    "declaration": false,
-    "sourceMap": false,
+    "declaration": true,
+    "sourceMap": true,
     "noEmit": false,
     "outDir": "../../build/client"
   }

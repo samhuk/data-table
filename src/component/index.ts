@@ -39,14 +39,7 @@ export const createDataTable = (options: DataTableOptions): DataTable => {
 
   // Initial get data if nullish data provided
   if (options.tableOptions.initialData == null) {
-    options.connector.getData({
-      query: {
-        page: paginator.page,
-        pageSize: paginator.pageSize,
-        fieldSortingList: table.fieldSortingList,
-      },
-      onComplete: onGetData,
-    })
+    getData()
   }
   else {
     // TODO: this could be better...
@@ -57,5 +50,9 @@ export const createDataTable = (options: DataTableOptions): DataTable => {
 
   return dataTable = {
     rendered: { element },
+    setPage: page => {
+      paginator.setPage(page)
+      getData()
+    },
   }
 }
