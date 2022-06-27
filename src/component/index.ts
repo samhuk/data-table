@@ -1,4 +1,5 @@
 import { createPaginator } from '@samhuk/paginator'
+import { createDataQuery } from '@samhuk/data-query'
 import { Paginator } from '@samhuk/paginator/dist/types'
 import { createTable } from '@samhuk/table'
 import { Table } from '@samhuk/table/dist/types'
@@ -15,11 +16,11 @@ export const createDataTable = (options: DataTableOptions): DataTable => {
   }
 
   const getData = () => options.connector.getData({
-    query: {
+    query: createDataQuery({
       page: paginator.page,
       pageSize: paginator.pageSize,
       fieldSortingList: table.fieldSortingList,
-    },
+    }),
     onComplete: onGetData,
   })
 

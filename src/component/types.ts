@@ -1,13 +1,13 @@
 import { PaginatorOptions } from '@samhuk/paginator/dist/types'
 import { FieldSorting, RowData, TableAppearanceOptions, TableOptions } from '@samhuk/table/dist/types'
-import { DataTableQuery } from './dataTableQuery/types'
+import { DataQuery } from '@samhuk/data-query/dist/types'
 
 export type Rendered = {
   element: HTMLElement
 }
 
 export type DataGetterOptions = {
-  query: DataTableQuery
+  query: DataQuery
   onComplete: (result: DataGetterResult) => void
 }
 

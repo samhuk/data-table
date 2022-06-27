@@ -29,6 +29,7 @@
   "repository": "https://github.com/samhuk/data-table",
   "license": "MIT",
   "dependencies": {
+    "@samhuk/data-query": "^1.0.2",
     "@samhuk/paginator": "^1.0.3",
     "@samhuk/table": "^1.0.13"
   },

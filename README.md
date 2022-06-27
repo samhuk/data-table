@@ -22,8 +22,10 @@ const createTestData = (q: DataTableQuery) => {
 }
 
 const dataTable = createDataTable({
+  // Provide mock connector to supply test data
   connector: {
     getData: options => {
+      // Artificial 0.5s delay
       setTimeout(() => {
         options.onComplete({
           data: createTestData(options.query),
@@ -49,7 +51,7 @@ const dataTable = createDataTable({
     pageSize: 20,
     pageSizeOptions: [20, 50, 100, 500],
   }
-}
+})
 
 element.appendChild(dataTable.rendered.element)
 ```
